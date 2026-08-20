@@ -1,0 +1,794 @@
+/* ========================================
+   Timbula Homepage
+   Common Styles
+======================================== */
+
+@font-face {
+    font-family: "Timbula Logo";
+    src: url("fonts/sushiki.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+:root {
+    --bg-main: #080b20;
+    --bg-secondary: #0d1230;
+    --bg-card: rgba(20, 27, 65, 0.72);
+
+    --text-main: #f5f7ff;
+    --text-secondary: #b9c1df;
+    --text-muted: #7f89b2;
+
+    --accent: #a9e8ff;
+    --accent-strong: #d7b8ff;
+    --accent-soft: rgba(169, 232, 255, 0.14);
+
+    --border: rgba(169, 232, 255, 0.2);
+    --border-strong: rgba(169, 232, 255, 0.42);
+
+    --content-width: 960px;
+
+    --radius-small: 12px;
+    --radius-medium: 20px;
+    --radius-large: 28px;
+}
+
+ul {
+    padding-left: 1.2em;
+}
+
+/* ========================================
+   Page Entrance Animation
+======================================== */
+
+main > *,
+.site-footer {
+    animation: fade-up 0.9s ease-out both;
+}
+
+.page-title {
+    animation-delay: 0.05s;
+}
+
+.page-nav {
+    animation-delay: 0.15s;
+}
+
+.application-button-wrapper {
+    animation-delay: 0.25s;
+}
+
+.content-section:nth-of-type(1) {
+    animation-delay: 0.35s;
+}
+
+.content-section:nth-of-type(2) {
+    animation-delay: 0.45s;
+}
+
+.final-application {
+    animation-delay: 0.55s;
+}
+
+.site-footer {
+    animation-delay: 0.65s;
+}
+
+@keyframes fade-up {
+    from {
+        opacity: 0;
+        transform: translateY(18px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ========================================
+   Reset
+======================================== */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 32px;
+}
+
+body {
+    margin: 0;
+    min-width: 320px;
+
+    color: var(--text-main);
+    background:
+        radial-gradient(circle at 15% 20%, rgba(120, 145, 255, 0.14), transparent 25%),
+        radial-gradient(circle at 85% 10%, rgba(190, 120, 255, 0.12), transparent 25%),
+        radial-gradient(circle at 50% 80%, rgba(80, 180, 255, 0.08), transparent 30%),
+        var(--bg-main);
+
+    font-family: "Shippori Mincho", serif;
+
+    line-height: 1.8;
+    overflow-x: hidden;
+}
+
+
+/* ========================================
+   Starry Background
+======================================== */
+
+body::before,
+body::after {
+    content: "";
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: -1;
+}
+
+body::before {
+    opacity: 0.78;
+
+    background:
+        /* 小さな星 */
+        radial-gradient(circle at 5% 8%, rgba(255,255,255,0.65) 0 0.8px, transparent 1.8px),
+        radial-gradient(circle at 12% 24%, rgba(255,255,255,0.55) 0 0.7px, transparent 1.7px),
+        radial-gradient(circle at 19% 61%, rgba(169,232,255,0.6) 0 0.8px, transparent 1.8px),
+        radial-gradient(circle at 27% 14%, rgba(255,255,255,0.7) 0 0.8px, transparent 1.8px),
+        radial-gradient(circle at 34% 47%, rgba(215,184,255,0.55) 0 0.7px, transparent 1.7px),
+        radial-gradient(circle at 42% 77%, rgba(255,255,255,0.6) 0 0.8px, transparent 1.8px),
+        radial-gradient(circle at 49% 28%, rgba(169,232,255,0.55) 0 0.7px, transparent 1.7px),
+        radial-gradient(circle at 57% 88%, rgba(255,255,255,0.65) 0 0.8px, transparent 1.8px),
+        radial-gradient(circle at 63% 52%, rgba(215,184,255,0.55) 0 0.7px, transparent 1.7px),
+        radial-gradient(circle at 71% 9%, rgba(255,255,255,0.65) 0 0.8px, transparent 1.8px),
+        radial-gradient(circle at 78% 68%, rgba(169,232,255,0.6) 0 0.8px, transparent 1.8px),
+        radial-gradient(circle at 86% 33%, rgba(255,255,255,0.6) 0 0.7px, transparent 1.7px),
+        radial-gradient(circle at 93% 82%, rgba(215,184,255,0.55) 0 0.8px, transparent 1.8px),
+
+        /* 中くらいの星 */
+        radial-gradient(circle at 15% 47%, rgba(255,255,255,0.85) 0 1.2px, transparent 3px),
+        radial-gradient(circle at 38% 19%, rgba(169,232,255,0.75) 0 1.2px, transparent 3px),
+        radial-gradient(circle at 58% 63%, rgba(255,255,255,0.8) 0 1.2px, transparent 3px),
+        radial-gradient(circle at 82% 24%, rgba(215,184,255,0.75) 0 1.2px, transparent 3px),
+
+        /* 大きく明るい星 */
+        radial-gradient(circle at 23% 42%, rgba(190,225,255,0.95) 0 1.5px, rgba(190,225,255,0.15) 4px, transparent 12px),
+        radial-gradient(circle at 81% 18%, rgba(220,195,255,0.9) 0 1.5px, rgba(220,195,255,0.12) 4px, transparent 13px);
+
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+
+body::after {
+    background:
+        radial-gradient(
+            circle at 23% 42%,
+            rgba(190, 225, 255, 0.22) 0,
+            rgba(190, 225, 255, 0.08) 3px,
+            transparent 12px
+        ),
+        radial-gradient(
+            circle at 81% 18%,
+            rgba(220, 195, 255, 0.2) 0,
+            rgba(220, 195, 255, 0.07) 3px,
+            transparent 13px
+        ),
+        linear-gradient(
+            115deg,
+            transparent 0%,
+            rgba(169, 232, 255, 0.025) 35%,
+            transparent 55%
+        );
+}
+
+
+/* ========================================
+   Header
+======================================== */
+
+.site-header {
+    width: min(var(--content-width), calc(100% - 40px));
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+.site-logo {
+    color: #ffffff;
+    text-decoration: none;
+
+    font-family: "Timbula Logo", serif;
+    font-size: 1.8rem;
+    font-weight: normal;
+    letter-spacing: 0.08em;
+
+    text-shadow:
+        0 0 3px rgba(255, 255, 255, 1),
+        0 0 8px rgba(220, 245, 255, 0.95),
+        0 0 16px rgba(169, 232, 255, 0.8),
+        0 0 30px rgba(169, 232, 255, 0.55),
+        0 0 55px rgba(169, 232, 255, 0.3);
+}
+
+
+/* ========================================
+   Main
+======================================== */
+
+main {
+    width: min(var(--content-width), calc(100% - 40px));
+    margin: 0 auto;
+}
+
+
+/* ========================================
+   Page Title
+======================================== */
+
+.page-title {
+    position: relative;
+
+    padding: 45px 20px 55px;
+
+    text-align: center;
+}
+
+.eyebrow {
+    margin: 0 0 12px;
+
+    color: var(--accent);
+    font-size: 0.78rem;
+    font-weight: 600;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+
+    opacity: 0.9;
+}
+
+.page-title h1 {
+    margin: 0;
+
+    font-family: "Shippori Mincho", serif;
+    font-size: clamp(2.5rem, 7vw, 4.5rem);
+    font-weight: 600;
+    letter-spacing: 0.12em;
+
+    text-shadow:
+        0 0 18px rgba(169, 232, 255, 0.35),
+        0 0 45px rgba(169, 232, 255, 0.12);
+}
+
+.submission-period {
+    margin: 24px auto 0;
+
+    color: var(--accent);
+    font-size: clamp(1.05rem, 2.5vw, 1.4rem);
+    font-weight: 600;
+    font-style: italic;
+    letter-spacing: 0.08em;
+
+    text-shadow:
+        0 0 12px rgba(169, 232, 255, 0.25);
+}
+
+.title-description {
+    max-width: 620px;
+    margin: 22px auto 0;
+
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+}
+
+
+/* ========================================
+   Page Navigation
+======================================== */
+
+.page-nav {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+
+    margin: 0 auto 20px;
+}
+
+.page-nav a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    min-width: 180px;
+    padding: 14px 24px;
+
+    color: var(--text-main);
+    background: rgba(255, 255, 255, 0.035);
+
+    border: 1px solid var(--border);
+    border-radius: 999px;
+
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 600;
+
+    transition:
+        background 0.25s ease,
+        border-color 0.25s ease,
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.page-nav a:hover {
+    background: var(--accent-soft);
+    border-color: var(--border-strong);
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 0 22px rgba(169, 232, 255, 0.1);
+}
+
+
+/* ========================================
+   Application Button
+======================================== */
+
+.application-button-wrapper {
+    display: flex;
+    justify-content: center;
+
+    margin: 0 auto 110px;
+}
+
+.application-button {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+
+    width: min(530px, 100%);
+    padding: 20px 26px;
+
+    color: #071020;
+
+    background:
+        linear-gradient(
+            110deg,
+            var(--accent),
+            #d9eaff 50%,
+            var(--accent-strong)
+        );
+
+    border-radius: var(--radius-medium);
+
+    text-decoration: none;
+    font-size: 1.05rem;
+    font-weight: 800;
+    letter-spacing: 0.05em;
+
+    box-shadow:
+        0 0 30px rgba(169, 232, 255, 0.14);
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.application-button:hover {
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 0 38px rgba(169, 232, 255, 0.28);
+}
+
+.arrow {
+    font-size: 1.3rem;
+}
+
+
+/* ========================================
+   Content Sections
+======================================== */
+
+.content-section {
+    margin-bottom: 110px;
+}
+
+.section-heading {
+    display: flex;
+    align-items: baseline;
+    gap: 18px;
+
+    margin-bottom: 30px;
+
+    border-bottom: 1px solid var(--border);
+
+    padding-bottom: 14px;
+}
+
+.section-number {
+    color: var(--accent);
+
+    font-family:
+        "Trebuchet MS",
+        "Segoe UI",
+        sans-serif;
+
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+}
+
+.section-heading h2 {
+    margin: 0;
+
+    font-size: clamp(1.6rem, 4vw, 2.2rem);
+    letter-spacing: 0.06em;
+}
+
+
+/* ========================================
+   Department Cards
+======================================== */
+
+.department-list {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.department-card {
+    position: relative;
+
+    padding: 30px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(31, 42, 92, 0.65),
+            rgba(14, 19, 50, 0.75)
+        );
+
+    border: 1px solid var(--border);
+    border-radius: var(--radius-medium);
+
+    overflow: hidden;
+}
+
+.department-card::before {
+    content: "";
+
+    position: absolute;
+    top: -80px;
+    right: -60px;
+
+    width: 180px;
+    height: 180px;
+
+    background: rgba(169, 232, 255, 0.08);
+
+    border-radius: 50%;
+
+    filter: blur(20px);
+}
+
+.department-card-header {
+    position: relative;
+}
+
+.department-label {
+    color: var(--accent);
+
+    font-family:
+        "Trebuchet MS",
+        "Segoe UI",
+        sans-serif;
+
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+}
+
+.department-card h3 {
+    margin: 4px 0 20px;
+
+    font-size: 1.45rem;
+}
+
+.department-card p {
+    position: relative;
+
+    margin: 0;
+
+    color: var(--text-secondary);
+    font-size: 0.92rem;
+}
+
+
+/* ========================================
+   Guidelines
+======================================== */
+
+.guideline-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.guideline-item {
+    background: rgba(255, 255, 255, 0.025);
+
+    border: 1px solid var(--border);
+    border-radius: var(--radius-small);
+
+    overflow: hidden;
+}
+
+.guideline-item summary {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 20px 24px;
+
+    cursor: pointer;
+
+    list-style: none;
+
+    font-size: 1rem;
+    font-weight: 700;
+
+    transition:
+        background 0.25s ease;
+}
+
+.guideline-item summary::-webkit-details-marker {
+    display: none;
+}
+
+.guideline-item summary:hover {
+    background: rgba(169, 232, 255, 0.05);
+}
+
+.details-icon {
+    color: var(--accent);
+
+    font-size: 1.4rem;
+    font-weight: 300;
+    line-height: 1;
+
+    transition: opacity 0.25s ease;
+}
+
+.guideline-item[open] .details-icon {
+    font-size: 0;
+}
+
+.guideline-item[open] .details-icon::after {
+    content: "−";
+    font-size: 1.4rem;
+}
+
+.guideline-content {
+    padding: 0 24px 26px;
+
+    color: var(--text-secondary);
+    font-size: 0.92rem;
+}
+
+.guideline-content h4 {
+    margin: 24px 0 8px;
+
+    color: var(--text-main);
+    font-size: 0.95rem;
+}
+
+.guideline-content p {
+    margin: 0 0 10px;
+}
+
+/* ========================================
+   Contact
+======================================== */
+
+.contact-content {
+    width: 100%;
+    margin: 0;
+    text-align: left;
+}
+
+.contact-address {
+    margin-top: 24px;
+
+    color: var(--accent);
+    font-size: 1.1rem;
+    letter-spacing: 0.04em;
+
+    text-shadow:
+        0 0 10px rgba(169, 232, 255, 0.3);
+}
+
+/* ========================================
+   Final Application
+======================================== */
+
+.final-application {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    margin: 0 0 100px;
+
+    text-align: center;
+}
+
+.final-application p {
+    margin: 0 0 24px;
+
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+}
+
+
+/* ========================================
+   Footer
+======================================== */
+
+.site-footer {
+    padding: 40px 20px 70px;
+
+    color: var(--text-muted);
+
+    text-align: center;
+    font-size: 0.75rem;
+    letter-spacing: 0.08em;
+}
+
+
+/* ========================================
+   Back to Top
+======================================== */
+
+.back-to-top {
+    position: fixed;
+    right: 24px;
+    bottom: 24px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 48px;
+    height: 48px;
+
+    color: var(--text-main);
+    background: rgba(12, 18, 48, 0.88);
+
+    border: 1px solid var(--border);
+    border-radius: 50%;
+
+    text-decoration: none;
+    font-size: 1.2rem;
+
+    backdrop-filter: blur(10px);
+
+    box-shadow:
+        0 5px 25px rgba(0, 0, 0, 0.25);
+
+    transition:
+        background 0.25s ease,
+        border-color 0.25s ease,
+        transform 0.25s ease;
+}
+
+.back-to-top:hover {
+    background: var(--accent-soft);
+    border-color: var(--border-strong);
+
+    transform: translateY(-3px);
+}
+
+
+/* ========================================
+   Responsive
+======================================== */
+
+@media (max-width: 700px) {
+
+    .site-header {
+        width: min(var(--content-width), calc(100% - 28px));
+        padding: 20px 0;
+    }
+
+    main {
+        width: min(var(--content-width), calc(100% - 28px));
+    }
+
+    .page-title {
+        padding: 60px 10px 45px;
+    }
+
+    .page-title h1 {
+        font-size: clamp(2.2rem, 13vw, 3.4rem);
+    }
+
+    .title-description {
+        font-size: 0.88rem;
+    }
+
+    .page-nav {
+        flex-direction: row;
+        gap: 8px;
+    }
+
+    .page-nav a {
+        flex: 1;
+        min-width: 0;
+        padding: 14px 10px;
+    }
+
+    .application-button-wrapper {
+        margin-bottom: 75px;
+    }
+
+    .application-button {
+        padding: 18px 20px;
+        border-radius: 16px;
+    }
+
+    .content-section {
+        margin-bottom: 75px;
+    }
+
+    .section-heading {
+        gap: 12px;
+    }
+
+    .department-list {
+        grid-template-columns: 1fr;
+    }
+
+    .department-card {
+        padding: 24px;
+    }
+
+    .guideline-item summary {
+        padding: 18px;
+    }
+
+    .guideline-content {
+        padding: 0 18px 22px;
+    }
+
+    .final-application {
+        margin-bottom: 70px;
+    }
+
+    .back-to-top {
+        right: 16px;
+        bottom: 16px;
+
+        width: 44px;
+        height: 44px;
+    }
+}
+
+
+/* ========================================
+   Reduced Motion
+======================================== */
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        transition-duration: 0.01ms !important;
+    }
+}
