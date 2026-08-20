@@ -3,14 +3,6 @@
    Common Styles
 ======================================== */
 
-@font-face {
-    font-family: "Timbula Logo";
-    src: url("fonts/sushiki.ttf") format("truetype");
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
-}
-
 :root {
     --bg-main: #080b20;
     --bg-secondary: #0d1230;
@@ -191,29 +183,29 @@ body::after {
    Header
 ======================================== */
 
+.site-logo {
+    display: block;
+    width: 150px;
+    margin: 0;
+
+    filter:
+        drop-shadow(0 0 3px rgba(255, 255, 255, 0.95))
+        drop-shadow(0 0 10px rgba(169, 232, 255, 0.8))
+        drop-shadow(0 0 24px rgba(169, 232, 255, 0.5))
+        drop-shadow(0 0 45px rgba(169, 232, 255, 0.25));
+}
+
+.site-logo img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
 .site-header {
     width: min(var(--content-width), calc(100% - 40px));
     margin: 0 auto;
-    padding: 20px 0;
+    padding: 24px 0;
 }
-
-.site-logo {
-    color: #ffffff;
-    text-decoration: none;
-
-    font-family: "Timbula Logo", serif;
-    font-size: 1.8rem;
-    font-weight: normal;
-    letter-spacing: 0.08em;
-
-    text-shadow:
-        0 0 3px rgba(255, 255, 255, 1),
-        0 0 8px rgba(220, 245, 255, 0.95),
-        0 0 16px rgba(169, 232, 255, 0.8),
-        0 0 30px rgba(169, 232, 255, 0.55),
-        0 0 55px rgba(169, 232, 255, 0.3);
-}
-
 
 /* ========================================
    Main
