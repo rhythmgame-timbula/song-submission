@@ -330,11 +330,20 @@ main {
 
 .application-button-wrapper {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
 
     margin: 0 auto 110px;
 }
 
+.application-note {
+    margin: 12px 0 0;
+
+    color: var(--text-muted);
+    font-size: 0.82rem;
+    line-height: 1.6;
+    text-align: center;
+}
 .application-button {
     display: flex;
     align-items: center;
@@ -380,7 +389,6 @@ main {
     font-size: 1.3rem;
 }
 
-
 /* ========================================
    Content Sections
 ======================================== */
@@ -421,6 +429,91 @@ main {
     letter-spacing: 0.06em;
 }
 
+/* ========================================
+   Introduction
+======================================== */
+
+.game-introduction-text {
+    margin-bottom: 28px;
+
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+}
+
+.game-introduction-text p {
+    margin: 0 0 12px;
+}
+
+.game-introduction-text p:last-child {
+    margin-bottom: 0;
+}
+
+.game-video {
+    position: relative;
+
+    width: 100%;
+    aspect-ratio: 16 / 9;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(31, 42, 92, 0.65),
+            rgba(14, 19, 50, 0.8)
+        );
+
+    border: 1px solid var(--border);
+    border-radius: var(--radius-medium);
+
+    overflow: hidden;
+
+    box-shadow:
+        0 0 30px rgba(169, 232, 255, 0.06);
+}
+
+.video-coming-soon {
+    position: absolute;
+    inset: 0;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+}
+
+.video-coming-soon span {
+    color: var(--accent);
+
+    font-family:
+        "Trebuchet MS",
+        "Segoe UI",
+        sans-serif;
+
+    font-size: clamp(1.2rem, 3vw, 1.8rem);
+    font-weight: 700;
+    letter-spacing: 0.18em;
+
+    text-shadow:
+        0 0 12px rgba(169, 232, 255, 0.45),
+        0 0 30px rgba(169, 232, 255, 0.2);
+}
+
+.video-coming-soon p {
+    margin: 12px 0 0;
+
+    color: var(--text-secondary);
+    font-size: 0.85rem;
+}
+
+.game-video iframe {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    border: 0;
+}
 
 /* ========================================
    Department Cards
@@ -565,10 +658,32 @@ main {
 }
 
 .guideline-content {
-    padding: 0 24px 26px;
+    display: grid;
+    grid-template-rows: 0fr;
+
+    padding: 0 24px;
 
     color: var(--text-secondary);
     font-size: 0.92rem;
+
+    opacity: 0;
+
+    transition:
+        grid-template-rows 0.35s ease,
+        opacity 0.25s ease,
+        padding 0.35s ease;
+}
+
+.guideline-content > * {
+    min-height: 0;
+}
+
+.guideline-item[open] .guideline-content {
+    grid-template-rows: 1fr;
+
+    padding: 0 24px 26px;
+
+    opacity: 1;
 }
 
 .guideline-content h4 {
