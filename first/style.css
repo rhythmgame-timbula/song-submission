@@ -12,8 +12,8 @@
     --text-secondary: #b9c1df;
     --text-muted: #7f89b2;
 
-    --accent: #a9e8ff;
-    --accent-strong: #d7b8ff;
+    --accent: #cbecfb;
+    --accent-strong: #a2b0ff;
     --accent-soft: rgba(169, 232, 255, 0.14);
 
     --border: rgba(169, 232, 255, 0.2);
@@ -359,7 +359,6 @@ main {
         linear-gradient(
             110deg,
             var(--accent),
-            #d9eaff 50%,
             var(--accent-strong)
         );
 
