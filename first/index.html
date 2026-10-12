@@ -1,3 +1,4 @@
+<!--<p>と<br>の使い分け不十分・<br>改行など文法のルール・マナーがなっていません。ご了承ください。-->
 <!DOCTYPE html>
 <html lang="ja">
 <head>
@@ -30,7 +31,8 @@
             <h1>第一回 Timbula</h1>
             <h1>楽曲公募</h1>
             <p class="submission-period">
-                募集期間：2026年8月21日(金) ～ 2026年11月1日(日) 23:59
+                募集期間：2026年8月21日(金) ～ <s>2026年11月1日(日)</s><br>
+                <u>2026年11月30日(月)</u> 23:59
             </p>
         </section>
 
@@ -48,6 +50,19 @@
         <p class="application-note">※応募前に、募集要項をご確認ください。</p>
         </div>
 
+<div class="notice-block">
+    <p class="notice-text">
+        お知らせ（10/12公開・タップして拡大）
+    </p>
+
+    <button class="notice-image-button" type="button" aria-label="お知らせ画像を拡大">
+        <img src="images/お知らせ.png" alt="お知らせ" class="notice-image">
+    </button></div>
+<div class="image-modal" id="notice-modal" aria-hidden="true">
+    <button class="image-modal-close" type="button" aria-label="閉じる">×</button>
+    <img src="images/お知らせ.png" alt="お知らせ（拡大表示）" class="image-modal-content">
+</div>
+
         <section id="introduction" class="content-section game-introduction">
             <div class="section-heading">
                 <span class="section-number">01</span>
@@ -63,7 +78,7 @@
             </p>
 
             <p>
-                ゲームの雰囲気等については、以下のプレイ動画をご覧ください。
+                ゲームの雰囲気等については、以下のプレイ動画をご覧ください(ノーツエフェクトを入れ忘れるミスがありました、申し訳ございません)。
             </p>
         </div>
 
@@ -138,7 +153,7 @@
 
                     <div class="guideline-content">
                         <h4>募集期間</h4>
-                        <p>8月21日(金)～11月1日(日) 23:59 (UTC+9)</p>
+                        <p>8月21日(金)～<s>11月1日(日)</s> <u><strong>11月30日(月)</strong></u> 23:59 (UTC+9)</p>
 
                         <h4>応募資格</h4>
                         <p>年齢や居住地などに関係なく、全ての人が応募可能です。<br>
@@ -154,7 +169,7 @@
                         <li>Timbulaのオリジナル曲として収録するため、応募楽曲は未公開のものに限ります。<br>
                             新規に制作する楽曲はもちろん、作り溜めしている楽曲や、過去に他の公募等で落選となった楽曲でも構いません。<br>
                         すでに公開済みの楽曲を応募する際は「既発部門」で応募してください。</li>
-                        <li>採用楽曲は非独占的ライセンスのもとでTimbulaに収録し、Timbula運営はその楽曲を自由に複製、翻案、改変等して使用できます。<br>
+                        <li>採用楽曲は独占的ライセンスのもとでTimbulaに収録し、Timbula運営はその楽曲を自由に複製、翻案、改変等して使用できます。<br>
                         また、自らの裁量で楽曲の使用許諾等をすることができます。ただし、著作権の譲渡は行いません。<br>
                         Timbulaのオリジナル曲として収録するため、他の作品（ゲームやアルバム等）への収録は原則としてご遠慮ください（事前に相談いただければ許可を出せる場合もございます)。</li>
                         <li>非商用ゲームにつき、金銭的報酬はお渡しできません。申し訳ございません。</li>
@@ -216,6 +231,9 @@
                         </ul>
                         <p>なお、応募後に若干の修正・ブラッシュアップをしても構いません。<br>
                         <br>
+                        また、応募楽曲の内容や各部門の応募数などを総合的に勘案し、星雲部門での採用を提案する場合がございます。<br>
+                        この提案は、一般部門の審査における採用基準点への到達を必要としません。<br>
+                        <br>
                         採用者全員へのメールの送信を終え次第、Timbula公式X（@Rhythm_Timbula）で告知を行います。その告知日から7日が経過してもファイルのアップロードまたはメールへの返信がない場合、改めてメールを送信させていただきます。再送信日からさらに7日（告知日から14日）が経過してもファイルのアップロードまたはメールへの返信がない場合、仮採用は取り消しとなります。<br>
                         もし仮採用が取り消された場合には、繰り上げ採用を行います。<br>
                         <br>
@@ -250,7 +268,7 @@
 
                     <div class="guideline-content">
                         <h4>募集期間</h4>
-                        <p>8月21日(金)～11月1日(日) 23:59 (UTC+9)</p>
+                        <p>8月21日(金)～<s>11月1日(日)</s> <u><strong>11月30日(月)</strong></u> 23:59 (UTC+9)</p>
 
                         <h4>応募資格</h4>
                         <p>年齢や居住地などに関係なく、全ての人が応募可能です。<br>
@@ -356,7 +374,7 @@
 
                     <div class="guideline-content">
                         <h4>募集期間</h4>
-                        <p>8月21日(金)～11月1日(日) 23:59 (UTC+9)</p>
+                        <p>8月21日(金)～<s>11月1日(日)</s> <u><strong>11月30日(月)</strong></u> 23:59 (UTC+9)</p>
 
                         <h4>応募資格</h4>
                         <p>年齢や居住地などに関係なく、全ての人が応募可能です。<br>
@@ -372,7 +390,7 @@
                         <li>Timbulaのオリジナル曲として収録するため、応募楽曲は未公開のものに限ります。<br>
                             新規に制作する楽曲はもちろん、作り溜めしている楽曲や、過去に他の公募等で落選となった楽曲でも構いません。<br>
                         すでに公開済みの楽曲を応募する際は「既発部門」で応募してください。</li>
-                        <li>採用楽曲は非独占的ライセンスのもとでTimbulaに収録し、Timbula運営はその楽曲を自由に複製、翻案、改変等して使用できます。<br>
+                        <li>採用楽曲は独占的ライセンスのもとでTimbulaに収録し、Timbula運営はその楽曲を自由に複製、翻案、改変等して使用できます。<br>
                         また、自らの裁量で楽曲の使用許諾等をすることができます。ただし、著作権の譲渡は行いません。<br>
                         Timbulaのオリジナル曲として収録するため、他の作品（ゲームやアルバム等）への収録は原則としてご遠慮ください（事前に相談いただければ許可を出せる場合もございます)。</li>
                         <li>非商用ゲームにつき、金銭的報酬はお渡しできません。申し訳ございません。</li>
@@ -435,6 +453,9 @@
                         </ul>
                         <p>なお、応募後に若干の修正・ブラッシュアップをしても構いません。<br>
                         <br>
+                        また、応募楽曲の内容や各部門の応募数などを総合的に勘案し、一般部門での採用を提案する場合がございます。<br>
+                        この提案は、星雲部門の審査における採用基準点への到達を必要としません。<br>
+                        <br>
                         採用者全員へのメールの送信を終え次第、Timbula公式X（@Rhythm_Timbula）で告知を行います。その告知日から7日が経過してもファイルのアップロードまたはメールへの返信がない場合、改めてメールを送信させていただきます。再送信日からさらに7日（告知日から14日）が経過してもファイルのアップロードまたはメールへの返信がない場合、仮採用は取り消しとなります。<br>
                         もし仮採用が取り消された場合には、繰り上げ採用を行います。<br>
                         <br>
@@ -478,6 +499,16 @@
                  <p>
                     [at]を@に変換し、件名を「第一回楽曲公募　問い合わせ」に設定してご連絡ください。
                 </p>
+                <p>
+                    また、応募作品の応募取り消しをしたい場合は、以下のフォームから送信してください。
+                </p>
+            </div>
+
+            <div class="withdrawal-form">
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLSdIzUQ22Sv95AImT9j0Ism0Df-lcv0QAQkpE1uMHU0DH_sTSQ/viewform?usp=header" class="withdrawal-button" target="_blank" rel="noopener noreferrer">
+                    応募取り消しフォーム
+                    <span aria-hidden="true"></span>
+                </a>
             </div>
         </section>
 
@@ -498,6 +529,37 @@
     <a href="#top" class="back-to-top" aria-label="ページ上部へ戻る">
         ↑
     </a>
+
+    <script>
+        const noticeButton = document.querySelector(".notice-image-button");
+        const noticeModal = document.getElementById("notice-modal");
+        const noticeClose = document.querySelector(".image-modal-close");
+
+        function openNoticeModal() {
+            noticeModal.classList.add("is-open");
+            noticeModal.setAttribute("aria-hidden", "false");
+        }
+
+        function closeNoticeModal() {
+            noticeModal.classList.remove("is-open");
+            noticeModal.setAttribute("aria-hidden", "true");
+        }
+
+        noticeButton.addEventListener("click", openNoticeModal);
+        noticeClose.addEventListener("click", closeNoticeModal);
+
+        noticeModal.addEventListener("click", (event) => {
+            if (event.target === noticeModal) {
+                closeNoticeModal();
+            }
+        });
+
+        document.addEventListener("keydown", (event) => {
+            if (event.key === "Escape") {
+                closeNoticeModal();
+            }
+        });
+    </script>
 
 </body>
 </html>
